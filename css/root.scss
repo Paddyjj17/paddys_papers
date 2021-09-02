@@ -9,6 +9,31 @@
   --b1: 14px;
   --b2: 12px;
   --caption: 8px;
+
+  --pd40: 40px;
+  --pd20: 20px;
+  --pd10: 10px;
+}
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  text-decoration: inherit;
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .h1 {
