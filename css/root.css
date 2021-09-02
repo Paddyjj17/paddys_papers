@@ -66,6 +66,9 @@
   text-transform: uppercase;
   font-size: var(--b2);
   line-height: 9.6px;
+  border: 1px solid var(--darkgrey);
+  display: inline-block;
+  padding: var(--pd10);
 }
 
 .caption {
