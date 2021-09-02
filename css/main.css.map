@@ -1,8 +1,10 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AE0UA;;;;GAIG",
     "sources": [
-        "main.scss"
+        "main.scss",
+        "root.scss",
+        "breakpoints.scss"
     ],
     "names": [],
     "file": "main.css"
