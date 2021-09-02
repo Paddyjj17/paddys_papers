@@ -66,6 +66,10 @@
   text-transform: uppercase;
   font-size: var(--b2);
   line-height: 9.6px;
+  border: 1px solid var(--darkgrey);
+  display: inline-block;
+  padding: var(--pd10);
+  cursor: pointer;
 }
 
 .caption {
@@ -79,4 +83,33 @@
 * Testing
 *
 **/
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 640px;
+  width: 900px;
+  background-color: var(--lightgrey);
+  padding: var(--pd40);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 /*# sourceMappingURL=main.css.map */

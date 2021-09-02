@@ -1,2 +1,27 @@
 @import "root.scss";
 @import "breakpoints";
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 640px;
+  width: 900px;
+  background-color: var(--lightgrey);
+  padding: var(--pd40);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
