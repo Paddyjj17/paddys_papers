@@ -8,6 +8,14 @@ body {
   padding: 0;
 }
 
+.dsnbycal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: var(--pd40);
+  color: var(--lightgrey);
+}
+
 .wrapper {
   height: 640px;
   width: 900px;
@@ -50,11 +58,24 @@ body {
 .misc {
   width: 390px;
   height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  &__current {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: var(--pd40);
+  }
   &__hab,
   &__wri {
     width: 180px;
+    height: auto;
+  }
+  &__words-title {
+    border-bottom: 1px solid var(--darkgrey);
+    margin-bottom: var(--pd10);
+  }
+  &__words-books {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }

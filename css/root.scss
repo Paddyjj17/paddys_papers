@@ -36,6 +36,10 @@
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: underline;
+}
+
 .h1 {
   font-size: var(--h1);
   text-transform: uppercase;

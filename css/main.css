@@ -34,6 +34,10 @@
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: underline;
+}
+
 .h1 {
   font-size: var(--h1);
   text-transform: uppercase;
@@ -90,6 +94,14 @@ body {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.dsnbycal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: var(--pd40);
+  color: var(--lightgrey);
 }
 
 .wrapper {
@@ -156,6 +168,9 @@ body {
 .misc {
   width: 390px;
   height: auto;
+}
+
+.misc__current {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,9 +181,28 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: var(--pd40);
 }
 
 .misc__hab, .misc__wri {
   width: 180px;
+  height: auto;
+}
+
+.misc__words-title {
+  border-bottom: 1px solid var(--darkgrey);
+  margin-bottom: var(--pd10);
+}
+
+.misc__words-books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=main.css.map */
