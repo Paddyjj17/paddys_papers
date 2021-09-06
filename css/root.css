@@ -45,6 +45,7 @@
 .h2 {
   font-size: var(--h2);
   text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 19.8px;
 }
 

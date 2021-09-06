@@ -9,8 +9,8 @@ body {
 }
 
 .wrapper {
-  height: 85%;
-  width: 62.5%;
+  height: 640px;
+  width: 900px;
   background-color: var(--lightgrey);
   padding: var(--pd40);
   margin: auto;
@@ -19,9 +19,42 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about {
+  width: 390px;
+  height: auto;
+  &__subtitle {
+    border-bottom: 1px solid var(--darkgrey);
+  }
+  &__copy {
+    margin-top: var(--pd20);
+  }
+}
+
+.misc {
+  width: 390px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__hab,
+  &__wri {
+    width: 180px;
+  }
 }
