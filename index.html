@@ -33,14 +33,42 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="bg">
+      <img
+        id="bgArray"
+        class="bg__array"
+        src="assets/imgs/bg.jpg"
+        alt="backgrounds"
+      />
+    </div>
     <div class="wrapper">
       <div class="header">
         <img src="assets/imgs/logo.svg" alt="paddy's papers logo" />
         <div class="header__item-container">
-          <div class="header__item btn">Get to Work</div>
-          <div class="header__item btn">Folio</div>
-          <div class="header__item btn">LinkedIn</div>
-          <div class="header__item btn">Instagram</div>
+          <ul class="header__item btn">
+            <li>
+              <p class="english">Get to work</p>
+              <p class="japanese caption">仕事を始める</p>
+            </li>
+          </ul>
+          <ul class="header__item btn">
+            <li>
+              <p class="english">Folio</p>
+              <p class="japanese caption">フォリオ</p>
+            </li>
+          </ul>
+          <ul class="header__item btn">
+            <li>
+              <p class="english">LinkedIn</p>
+              <p class="japanese caption">(LINKEDIN)</p>
+            </li>
+          </ul>
+          <ul class="header__item btn">
+            <li>
+              <p class="english">Instagram</p>
+              <p class="japanese caption">インスタグラム</p>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="content">
@@ -91,8 +119,33 @@
     </div>
     <div class="dsnbycal b2">
       DESIGNED BY
-      <a href="http://www.callenneasmith.com">CALLEN NEASMITH</a>
+      <a href="http://www.callenneasmith.com"> CALLEN NEASMITH </a>
     </div>
-    <div class="bg"></div>
+    <script>
+      $(document).ready(function () {
+        console.log("ready!");
+        var index = 1;
+        var images = new Array(
+          "assets/imgs/bg.jpg",
+          "assets/imgs/bg-1.jpg",
+          "assets/imgs/bg-2.jpg",
+          "assets/imgs/bg-3.jpg"
+        );
+        function bgArray() {
+          $("#bgArray").fadeOut("fast", function () {
+            $(this).attr("src", images[index]);
+
+            $(this).fadeIn("fast", function () {
+              if (index == images.length - 1) {
+                index = 0;
+              } else {
+                index++;
+              }
+            });
+          });
+        }
+        setInterval(bgArray, 5000);
+      });
+    </script>
   </body>
 </html>

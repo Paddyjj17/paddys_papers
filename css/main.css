@@ -94,6 +94,7 @@ body {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .dsnbycal {
@@ -102,6 +103,15 @@ body {
   right: 0;
   padding: var(--pd40);
   color: var(--lightgrey);
+}
+
+.bg {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .wrapper {
@@ -134,6 +144,22 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header__item {
+  list-style: none;
+}
+
+.header__item li .japanese {
+  display: none;
+}
+
+.header__item li:hover .english {
+  display: none;
+}
+
+.header__item li:hover .japanese {
+  display: block;
 }
 
 .content {
