@@ -43,20 +43,51 @@ body {
 }
 
 .header {
+  &__item-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    height: fit-content;
+    width: auto;
+  }
   &__item {
     list-style: none;
-    li .japanese {
-      display: none;
-    }
-    li:hover .english {
-      display: none;
-    }
-    li:hover .japanese {
-      display: block;
-    }
+    margin-left: var(--pd10);
+  }
+  &__item:hover .english {
+    display: none;
+  }
+  &__item:hover .japanese {
+    display: block;
+  }
+  li .japanese {
+    display: none;
   }
   display: flex;
   justify-content: space-between;
+}
+
+#gtw,
+#folio,
+#linkedin,
+#insta {
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gtw {
+  width: 85px;
+}
+#folio {
+  width: 37px;
+}
+#linkedin {
+  width: 61px;
+}
+#insta {
+  width: 73px;
 }
 
 .content {
