@@ -35,6 +35,7 @@
 }
 
 a {
+  cursor: url(../assets/cursor.png) 0 28, auto;
   text-decoration: none;
   display: inline-block;
 }
@@ -75,7 +76,6 @@ a {
   border: 1px solid var(--darkgrey);
   display: inline-block;
   padding: var(--pd10);
-  cursor: pointer;
 }
 
 .caption {
@@ -96,12 +96,14 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: url(../assets/cursor.png) 0 28, auto;
 }
 
 @media (max-width: 480px) {
   html,
   body {
     overflow: auto;
+    cursor: none;
   }
 }
 
@@ -268,14 +270,8 @@ body {
 }
 
 .header__item {
+  cursor: url(../assets/cursor.png) 0 28, auto;
   list-style: none;
-  margin-left: var(--pd10);
-}
-
-@media (max-width: 480px) {
-  .header__item {
-    margin-bottom: var(--pd10);
-  }
 }
 
 .header__item:hover .english {
@@ -292,6 +288,16 @@ body {
 
 .header li .japanese {
   display: none;
+}
+
+#header__item {
+  margin-left: var(--pd10);
+}
+
+@media (max-width: 480px) {
+  #header__item {
+    margin-bottom: var(--pd10);
+  }
 }
 
 #gtw,
@@ -456,6 +462,10 @@ body {
             justify-content: flex-start;
     width: 100%;
   }
+}
+
+.misc__book-imgs {
+  cursor: url(../assets/cursor.png) 0 28, auto;
 }
 
 @media (max-width: 480px) {

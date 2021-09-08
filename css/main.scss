@@ -7,8 +7,10 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  cursor: url(../assets/cursor.png) 0 28, auto;
   @include media("<=phone") {
     overflow: auto;
+    cursor: none;
   }
 }
 
@@ -113,11 +115,8 @@ body {
     width: auto;
   }
   &__item {
-    @include media("<=phone") {
-      margin-bottom: var(--pd10);
-    }
+    cursor: url(../assets/cursor.png) 0 28, auto;
     list-style: none;
-    margin-left: var(--pd10);
   }
   &__item:hover .english {
     display: none;
@@ -137,6 +136,13 @@ body {
   }
   li .japanese {
     display: none;
+  }
+}
+
+#header__item {
+  margin-left: var(--pd10);
+  @include media("<=phone") {
+    margin-bottom: var(--pd10);
   }
 }
 
@@ -232,6 +238,7 @@ body {
     }
   }
   &__book-imgs {
+    cursor: url(../assets/cursor.png) 0 28, auto;
     img {
       @include media("<=phone") {
         padding-top: var(--pd10);
