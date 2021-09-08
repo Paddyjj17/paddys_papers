@@ -8,9 +8,12 @@ body {
   padding: 0;
   overflow: hidden;
   cursor: url(../assets/cursor.png) 0 28, auto;
+  height: 100%;
   @include media("<=phone") {
     overflow: auto;
     cursor: none;
+    height: 100%;
+    background-color: var(--lightgrey);
   }
 }
 
