@@ -18,6 +18,12 @@ body {
   right: 0;
   padding: var(--pd20);
   color: var(--lightgrey);
+  a {
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: none;
+  }
   @include media("<=phone") {
     display: none;
   }

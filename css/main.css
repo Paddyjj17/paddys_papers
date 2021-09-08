@@ -113,6 +113,14 @@ body {
   color: var(--lightgrey);
 }
 
+.dsnbycal a {
+  text-decoration: underline;
+}
+
+.dsnbycal a:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 480px) {
   .dsnbycal {
     display: none;
