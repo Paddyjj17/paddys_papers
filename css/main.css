@@ -105,6 +105,16 @@ body {
   }
 }
 
+::-moz-selection {
+  background-color: var(--darkgrey);
+  color: var(--lightgrey);
+}
+
+::selection {
+  background-color: var(--darkgrey);
+  color: var(--lightgrey);
+}
+
 .dsnbycal {
   position: absolute;
   bottom: 0;

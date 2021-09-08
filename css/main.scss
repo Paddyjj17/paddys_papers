@@ -12,6 +12,11 @@ body {
   }
 }
 
+::selection {
+  background-color: var(--darkgrey);
+  color: var(--lightgrey);
+}
+
 .dsnbycal {
   position: absolute;
   bottom: 0;
