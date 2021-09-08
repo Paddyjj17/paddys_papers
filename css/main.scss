@@ -7,6 +7,9 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  @include media("<=phone") {
+    overflow: auto;
+  }
 }
 
 .dsnbycal {
@@ -15,9 +18,25 @@ body {
   right: 0;
   padding: var(--pd20);
   color: var(--lightgrey);
+  @include media("<=phone") {
+    display: none;
+  }
+}
+.dsnbycal-mobile {
+  margin-bottom: var(--pd20);
+  color: var(--black);
+  a {
+    text-decoration: underline;
+  }
+  @include media(">phone") {
+    display: none;
+  }
 }
 
 .bg {
+  @include media("<=phone") {
+    display: none;
+  }
   z-index: -1;
   position: absolute;
   top: 0;
@@ -29,6 +48,12 @@ body {
 }
 
 .wrapper {
+  @include media("<=phone") {
+    height: 100%;
+    width: 100%;
+    padding: var(--pd20);
+    justify-content: flex-start;
+  }
   height: 640px;
   width: 900px;
   background-color: var(--lightgrey);
@@ -45,7 +70,27 @@ body {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  @include media("<=phone") {
+    height: fit-content;
+    width: 100%;
+    margin-bottom: var(--pd40);
+  }
+
+  img {
+    @include media("<=phone") {
+      height: 70px;
+      width: auto;
+    }
+  }
   &__item-container {
+    @include media("<=phone") {
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+      width: 70%;
+    }
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -54,6 +99,9 @@ body {
     width: auto;
   }
   &__item {
+    @include media("<=phone") {
+      margin-bottom: var(--pd10);
+    }
     list-style: none;
     margin-left: var(--pd10);
   }
@@ -76,8 +124,6 @@ body {
   li .japanese {
     display: none;
   }
-  display: flex;
-  justify-content: space-between;
 }
 
 #gtw,
@@ -103,6 +149,9 @@ body {
 }
 
 .content {
+  @include media("<=phone") {
+    flex-direction: column;
+  }
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -110,6 +159,9 @@ body {
 }
 
 .about {
+  @include media("<=phone") {
+    width: 100%;
+  }
   width: 390px;
   height: auto;
   &__subtitle {
@@ -117,17 +169,31 @@ body {
   }
   &__copy {
     margin-top: var(--pd20);
+    @include media("<=phone") {
+      margin-bottom: var(--pd20);
+    }
   }
 }
 
 .misc {
   width: 390px;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  @include media("<=phone") {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
   &__current {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: var(--pd40);
+    @include media("<=phone") {
+      margin-bottom: var(--pd20);
+      margin-top: var(--pd40);
+    }
   }
   &__hab,
   &__wri {
@@ -137,11 +203,27 @@ body {
   &__words-title {
     border-bottom: 1px solid var(--darkgrey);
     margin-bottom: var(--pd10);
+    @include media("<=phone") {
+      margin-bottom: 0;
+    }
   }
   &__words-books {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    @include media("<=phone") {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+  &__book-imgs {
+    img {
+      @include media("<=phone") {
+        padding-top: var(--pd10);
+        padding-right: var(--pd10);
+      }
+    }
   }
   &__book-imgs:hover {
     -webkit-animation: blur 0.5s;

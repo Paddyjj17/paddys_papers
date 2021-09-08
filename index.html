@@ -100,6 +100,10 @@
           </div>
         </div>
         <div class="misc">
+          <div class="dsnbycal-mobile b2">
+            DESIGNED BY
+            <a href="http://www.callenneasmith.com"> CALLEN NEASMITH </a>
+          </div>
           <div class="misc__current">
             <div class="misc__hab">
               <div class="misc__hab-title b1">CURRENT HABITAT</div>
@@ -133,28 +137,31 @@
     </div>
     <script>
       $(document).ready(function () {
-        console.log("ready!");
-        var index = 1;
-        var images = new Array(
-          "assets/imgs/bg.jpg",
-          "assets/imgs/bg-1.jpg",
-          "assets/imgs/bg-2.jpg",
-          "assets/imgs/bg-3.jpg"
-        );
-        function bgArray() {
-          $("#bgArray").fadeOut("fast", function () {
-            $(this).attr("src", images[index]);
+        const desktop = window.matchMedia("(min-width: 1000px)");
+        if (desktop.matches) {
+          console.log("ready!");
+          var index = 1;
+          var images = new Array(
+            "assets/imgs/bg.jpg",
+            "assets/imgs/bg-1.jpg",
+            "assets/imgs/bg-2.jpg",
+            "assets/imgs/bg-3.jpg"
+          );
+          function bgArray() {
+            $("#bgArray").fadeOut("fast", function () {
+              $(this).attr("src", images[index]);
 
-            $(this).fadeIn("fast", function () {
-              if (index == images.length - 1) {
-                index = 0;
-              } else {
-                index++;
-              }
+              $(this).fadeIn("fast", function () {
+                if (index == images.length - 1) {
+                  index = 0;
+                } else {
+                  index++;
+                }
+              });
             });
-          });
+          }
+          setInterval(bgArray, 5000);
         }
-        setInterval(bgArray, 5000);
       });
     </script>
   </body>
