@@ -36,6 +36,7 @@
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 .h1 {
@@ -175,10 +176,14 @@ body {
 
 .header__item:hover .english {
   display: none;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
 }
 
 .header__item:hover .japanese {
   display: block;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
 }
 
 .header li .japanese {
@@ -285,5 +290,56 @@ body {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.misc__book-imgs:hover {
+  -webkit-animation: blur 0.5s;
+  animation: blur 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blur {
+  from {
+    -webkit-filter: blur(0px);
+    /* Safari 6.0 - 9.0 */
+    filter: blur(0px);
+  }
+  to {
+    -webkit-filter: blur(3px);
+    /* Safari 6.0 - 9.0 */
+    filter: blur(3px);
+  }
+}
+
+@-webkit-keyframes blur {
+  from {
+    -webkit-filter: blur(0px);
+    /* Safari 6.0 - 9.0 */
+    filter: blur(0px);
+  }
+  to {
+    -webkit-filter: blur(3px);
+    /* Safari 6.0 - 9.0 */
+    filter: blur(3px);
+  }
 }
 /*# sourceMappingURL=main.css.map */
