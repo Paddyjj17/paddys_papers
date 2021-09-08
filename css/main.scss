@@ -97,6 +97,9 @@ body {
       -webkit-flex-wrap: wrap;
       width: 70%;
     }
+    @include media(">319px", "<380px") {
+      width: 75%;
+    }
     display: flex;
     justify-content: center;
     align-items: flex-start;

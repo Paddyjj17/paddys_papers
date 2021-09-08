@@ -251,6 +251,12 @@ body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 379px) {
+  .header__item-container {
+    width: 75%;
+  }
+}
+
 .header__item {
   list-style: none;
   margin-left: var(--pd10);
