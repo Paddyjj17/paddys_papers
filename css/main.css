@@ -291,6 +291,7 @@ body {
         flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     width: 100%;
+    margin-bottom: var(--pd40);
   }
 }
 
