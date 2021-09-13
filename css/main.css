@@ -11,6 +11,7 @@
   --pd40: 40px;
   --pd20: 20px;
   --pd10: 10px;
+  --pd5: 5px;
 }
 
 *,
@@ -486,7 +487,7 @@ body {
     width: 100%;
   }
   .misc__words-books a {
-    padding: 10px;
+    padding: var(--pd5);
   }
 }
 

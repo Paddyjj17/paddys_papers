@@ -249,7 +249,7 @@ body {
     justify-content: space-evenly;
     @include media("<=phone") {
       a {
-        padding: 10px;
+        padding: var(--pd5);
       }
       flex-wrap: wrap;
       justify-content: flex-start;
