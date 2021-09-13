@@ -54,23 +54,18 @@ body {
     display: none;
   }
   z-index: -1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
 .wrapper {
   @include media("<=phone") {
-    height: 100%;
-    width: 100%;
     padding: var(--pd20);
     justify-content: flex-start;
   }
-  height: 640px;
-  width: 900px;
+  height: 100%;
+  width: 100%;
   background-color: var(--lightgrey);
   padding: var(--pd40);
   margin: auto;
@@ -83,6 +78,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.5));
+}
+
+@media only screen and (min-height: 640px) {
+  @media only screen and (min-width: 900px) {
+    .wrapper {
+      width: 900px;
+      height: 640px;
+    }
+  }
 }
 
 .br-mobile {

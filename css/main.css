@@ -159,11 +159,8 @@ body {
 
 .bg {
   z-index: -1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -175,8 +172,8 @@ body {
 }
 
 .wrapper {
-  height: 640px;
-  width: 900px;
+  height: 100%;
+  width: 100%;
   background-color: var(--lightgrey);
   padding: var(--pd40);
   margin: auto;
@@ -201,12 +198,17 @@ body {
 
 @media (max-width: 480px) {
   .wrapper {
-    height: 100%;
-    width: 100%;
     padding: var(--pd20);
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-height: 640px) and (min-width: 900px) {
+  .wrapper {
+    width: 900px;
+    height: 640px;
   }
 }
 
