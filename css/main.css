@@ -107,9 +107,6 @@ body {
   html,
   body {
     overflow: auto;
-    cursor: none;
-    height: 100%;
-    background-color: var(--lightgrey);
   }
 }
 
@@ -170,9 +167,9 @@ body {
 }
 
 .wrapper {
+  background-color: var(--lightgrey);
   height: 100%;
   width: 100%;
-  background-color: var(--lightgrey);
   padding: var(--pd40);
   margin: auto;
   position: absolute;
@@ -187,6 +184,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -200,6 +200,10 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    position: relative;
+    background-color: transparent;
+    -webkit-filter: none;
+            filter: none;
   }
 }
 
@@ -459,12 +463,6 @@ body {
   margin-bottom: var(--pd10);
 }
 
-@media (max-width: 480px) {
-  .misc__words-title {
-    margin-bottom: 0;
-  }
-}
-
 .misc__words-books {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -473,8 +471,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 @media (max-width: 480px) {
@@ -486,15 +485,13 @@ body {
             justify-content: flex-start;
     width: 100%;
   }
+  .misc__words-books a {
+    padding: 10px;
+  }
 }
 
 .misc__book-imgs {
   cursor: url(../assets/cursor.png) 0 28, auto;
-}
-
-.misc__book-imgs img {
-  width: 126px;
-  height: 168px;
 }
 
 @media (max-width: 480px) {
@@ -503,10 +500,13 @@ body {
   }
 }
 
+.misc__book-imgs img {
+  width: 126px;
+  height: 168px;
+}
+
 @media (max-width: 480px) {
   .misc__book-imgs img {
-    padding-top: var(--pd10);
-    padding-right: var(--pd10);
     width: 100%;
     height: auto;
   }

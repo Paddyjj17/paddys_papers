@@ -11,9 +11,6 @@ body {
   height: 100%;
   @include media("<=phone") {
     overflow: auto;
-    cursor: none;
-    height: 100%;
-    background-color: var(--lightgrey);
   }
 }
 
@@ -61,10 +58,13 @@ body {
   @include media("<=phone") {
     padding: var(--pd20);
     justify-content: flex-start;
+    position: relative;
+    background-color: transparent;
+    filter: none;
   }
+  background-color: var(--lightgrey);
   height: 100%;
   width: 100%;
-  background-color: var(--lightgrey);
   padding: var(--pd40);
   margin: auto;
   position: absolute;
@@ -74,6 +74,7 @@ body {
   right: 0;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: space-between;
   filter: drop-shadow(4px 4px 15px rgba(0, 0, 0, 0.5));
 }
@@ -241,15 +242,15 @@ body {
   &__words-title {
     border-bottom: 1px solid var(--darkgrey);
     margin-bottom: var(--pd10);
-    @include media("<=phone") {
-      margin-bottom: 0;
-    }
   }
   &__words-books {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     @include media("<=phone") {
+      a {
+        padding: 10px;
+      }
       flex-wrap: wrap;
       justify-content: flex-start;
       width: 100%;
@@ -257,18 +258,13 @@ body {
   }
   &__book-imgs {
     cursor: url(../assets/cursor.png) 0 28, auto;
-    img {
-      width: 126px;
-      height: 168px;
-    }
-
     @include media("<=phone") {
       width: 50%;
     }
     img {
+      width: 126px;
+      height: 168px;
       @include media("<=phone") {
-        padding-top: var(--pd10);
-        padding-right: var(--pd10);
         width: 100%;
         height: auto;
       }
