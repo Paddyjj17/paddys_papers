@@ -38,6 +38,9 @@ a {
   cursor: url(../assets/cursor.png) 0 28, auto;
   text-decoration: none;
   display: inline-block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h1 {
@@ -121,6 +124,7 @@ body {
 }
 
 .dsnbycal {
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -134,12 +138,6 @@ body {
 
 .dsnbycal a:hover {
   text-decoration: none;
-}
-
-@media (max-width: 480px) {
-  .dsnbycal {
-    display: none;
-  }
 }
 
 .dsnbycal-mobile {
@@ -209,6 +207,9 @@ body {
   .wrapper {
     width: 900px;
     height: 640px;
+  }
+  .dsnbycal {
+    display: block;
   }
 }
 
@@ -489,7 +490,17 @@ body {
 
 .misc__book-imgs {
   cursor: url(../assets/cursor.png) 0 28, auto;
-  width: 50%;
+}
+
+.misc__book-imgs img {
+  width: 126px;
+  height: 168px;
+}
+
+@media (max-width: 480px) {
+  .misc__book-imgs {
+    width: 50%;
+  }
 }
 
 @media (max-width: 480px) {

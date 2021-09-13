@@ -23,6 +23,7 @@ body {
 }
 
 .dsnbycal {
+  display: none;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -33,9 +34,6 @@ body {
   }
   a:hover {
     text-decoration: none;
-  }
-  @include media("<=phone") {
-    display: none;
   }
 }
 .dsnbycal-mobile {
@@ -85,6 +83,9 @@ body {
     .wrapper {
       width: 900px;
       height: 640px;
+    }
+    .dsnbycal {
+      display: block;
     }
   }
 }
@@ -256,7 +257,14 @@ body {
   }
   &__book-imgs {
     cursor: url(../assets/cursor.png) 0 28, auto;
-    width: 50%;
+    img {
+      width: 126px;
+      height: 168px;
+    }
+
+    @include media("<=phone") {
+      width: 50%;
+    }
     img {
       @include media("<=phone") {
         padding-top: var(--pd10);
