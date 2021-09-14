@@ -124,10 +124,11 @@ body {
 .dsnbycal {
   display: none;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: var(--pd20);
+  bottom: 120px;
+  right: -60px;
   color: var(--lightgrey);
+  transform: rotate(-90deg);
+
 }
 
 .dsnbycal a {
